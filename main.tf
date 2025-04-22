@@ -26,5 +26,6 @@ resource "aws_s3_bucket" "example" {
   tags = {
     Environment = var.environment
     Owner       = var.owner
+    Project     = "spacelift-demo" 
   }
 }
