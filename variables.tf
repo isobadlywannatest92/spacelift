@@ -5,19 +5,25 @@ variable "aws_region" {
 }
 
 variable "bucket_prefix" {
-  description = "Prefix for the S3 bucket name"
+  description = "Prefix for bucket name"
   type        = string
-  default     = "spacelift-noob"
+  default     = "spacelift-clean"
 }
 
 variable "environment" {
-  description = "Environment name (e.g. dev, test, prod)"
+  description = "Environment label"
   type        = string
   default     = "dev"
 }
 
 variable "owner" {
-  description = "Owner tag for the bucket"
+  description = "Bucket owner"
   type        = string
-  default     = "your-name"
+  default     = "weronika"
+}
+
+variable "project" {
+  description = "Project name for tagging"
+  type        = string
+  default     = "spacelift-demo"
 }
