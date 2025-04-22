@@ -23,9 +23,9 @@ resource "aws_s3_bucket" "example" {
   bucket        = "${var.bucket_prefix}-${random_id.suffix.hex}"
   force_destroy = true
 
-  tags = {
-    Environment = var.environment
-    Owner       = var.owner
-    Project     = "spacelift-demo" 
-  }
+tags = {
+  Environment = var.environment
+  Owner       = var.owner
+  Project     = "spacelift-demo"
+}
 }
