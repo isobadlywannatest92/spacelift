@@ -5,7 +5,7 @@ terraform {
       version = "~> 5.0"
     }
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "~> 3.0"
     }
   }
@@ -20,18 +20,18 @@ resource "random_id" "suffix" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket        = "spacelift-noob-test-bucket-${random_id.suffix.hex}"
+  bucket        = "spacelift-noob-reset-${random_id.suffix.hex}"
   force_destroy = true
 
   tags = {
-    Name = "SpaceliftNoob Updated"
+    Name = "Spacelift Noob Restart"
   }
 }
+
 output "bucket_name" {
   value = aws_s3_bucket.example.bucket
 }
+
 output "bucket_arn" {
   value = aws_s3_bucket.example.arn
 }
-
-
