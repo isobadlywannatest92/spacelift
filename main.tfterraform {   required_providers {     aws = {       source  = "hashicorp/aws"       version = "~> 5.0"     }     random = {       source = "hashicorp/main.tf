@@ -20,7 +20,7 @@ resource "random_id" "suffix" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket        = "spacelift-noob-reset-${random_id.suffix.hex}"
+  bucket = "spacelift-noob-restart-${random_id.suffix.hex}"
   force_destroy = true
 
   tags = {
