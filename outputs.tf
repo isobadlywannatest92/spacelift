@@ -1,4 +1,4 @@
-output "debug_bucket_tags" {
+output "debug_tags" {
   value = {
     Environment = var.environment
     Owner       = var.owner
