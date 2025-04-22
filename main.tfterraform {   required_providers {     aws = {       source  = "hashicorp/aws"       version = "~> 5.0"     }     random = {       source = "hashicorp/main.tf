@@ -24,7 +24,7 @@ resource "aws_s3_bucket" "example" {
   force_destroy = true
 
   tags = {
-    Name = "SpaceliftNoob"
+    Name = "SpaceliftNoob Updated"
   }
 }
 output "bucket_name" {
