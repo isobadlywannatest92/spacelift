@@ -13,7 +13,7 @@ variable "bucket_prefix" {
 variable "environment" {
   description = "Environment label"
   type        = string
-  default     = "dev"
+  default     = "UX"
 }
 
 variable "owner" {
